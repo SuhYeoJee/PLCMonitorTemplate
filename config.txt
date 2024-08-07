@@ -1,0 +1,3 @@
+[DEFAULT]
+text = pyqt5 template
+t = wef

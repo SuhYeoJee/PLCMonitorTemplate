@@ -1,0 +1,12 @@
+{
+    "PLC_ADDR" : {
+        "AUTOMATIC" :{
+            "PRGNO" : "DW5004",
+            "PRGNAME" : "DW2090"
+        },
+        "SYSTEM":{
+            "ON":"???",
+            "RUN":"???"
+        }
+    }
+}

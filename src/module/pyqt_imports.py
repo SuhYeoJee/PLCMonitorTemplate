@@ -4,3 +4,4 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout,
 from PyQt5.QtGui import QPainter, QPen
 from PyQt5.QtGui import QFont, QColor
 from PyQt5.QtCore import Qt
+from PyQt5 import uic

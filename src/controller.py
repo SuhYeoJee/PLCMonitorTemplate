@@ -1,6 +1,6 @@
 if __debug__:
     import sys
-    sys.path.append(r"D:\Github\SinterMonitor")
+    sys.path.append(r"D:\Github\PLCMonitorTemplate")
 # -------------------------------------------------------------------------------------------
 from src.model import Model
 from src.view import View    
@@ -11,13 +11,16 @@ class Controller:
     def __init__(self):
         self.model = Model()
         self.view = View()
-        # --------------------------
-        self.set_lay1_from_model_val()
-    # -------------------------------------------------------------------------------------------
-    def set_lay1_from_model_val(self):
-        model_val = self.model.get_val()
-        self.view.change_main_text(model_val)
+        # [btn mapping] --------------------------
+        self.view.pushButton.clicked.connect(self.set_lineEdit_plc_data)
 
+    # -------------------------------------------------------------------------------------------
+    def set_lineEdit_plc_data(self):
+        from random import randint
+        
+        plc_data = self.model.get_plc_data("DW5004"+str(randint(1,10)))
+        self.view.lineEdit.setText(plc_data)
+        ...
 
 # ===========================================================================================
 

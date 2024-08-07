@@ -1,5 +1,14 @@
-# PythonTemplates
-파이썬 프로그램 템플릿 코드
+# PLC MONITOR TEMPLATE
 
-### 1. pyqt  
-> pyqt를 이용하는 MVC 구조 기본 템플릿  
+## PLC 주소의 값을 화면에 표시하는 프로그램
+
+
+### LOG
+
+> v2.00
+- `QT Designer` 사용해서 `.ui` 파일로 화면 생성
+
+> v1.00
+- MVC 클래스 분리
+- `WindowBuilder`: 위젯, 레이아웃 생성기
+- `controller` 클래스에서 `ConfigParser`사용
