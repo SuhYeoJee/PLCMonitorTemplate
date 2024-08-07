@@ -5,10 +5,21 @@ if __debug__:
 from configparser import ConfigParser
 import json
 # ===========================================================================================
+
+# class connect_wait():
+#     def __init__(self):
+#         self.dataset = "CW"
+#         self.check = ""
+# class start_wait():...
+# class exit_wait():...
+
+# ===========================================================================================
 class Model():
     def __init__(self):
         self.config = self.get_config()
         self.addrs = self.get_plc_addrs()
+        # self.c_w, self.s_w, self.e_w = connect_wait(), start_wait(), exit_wait()
+        # self.state = self.c_w
 
     # [PLC] -------------------------------------------------------------------------------------------
     def get_plc_data(self,addr:str,size:int=1):
