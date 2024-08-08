@@ -22,6 +22,7 @@ class Worker(QThread):
 
     def stop(self):
         self.running = False
+
 # ===========================================================================================
 class Controller:
     def __init__(self):
