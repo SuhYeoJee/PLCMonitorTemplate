@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="ON">
      <property name="geometry">
       <rect>
        <x>210</x>

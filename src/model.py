@@ -12,14 +12,14 @@ class state_wait():
         self.addrs = self.get_plc_addrs()
         self.dataset = None
         self.next_state = None
+        
+    def _is_next(self,val)->bool:...
     # [json] -------------------------------------------------------------------------------------------
     def get_plc_addrs(self):
         with open("./src/spec/PLC_ADDR.json", 'r', encoding='utf-8') as file:
             data = json.load(file)
         return data 
     
-    def _is_next(self,val)->bool:...
-
 class test_wait(state_wait):
     def __init__(self):
         super().__init__()

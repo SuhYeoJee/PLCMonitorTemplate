@@ -36,7 +36,12 @@ class Controller:
 
     def worker_tick(self):
         update_data = self.model.worker_tick()
-        self.view.lineEdit.setText(str(update_data.items()))
+        for k,v in update_data.items():
+            try: #line edit에 값 표시
+                self.view.findChild(QLineEdit, k, Qt.FindChildrenRecursively).setText(str(v))
+            except AttributeError as e:
+                ...
+                #print_error_box(e,k,v)
 
     # --------------------------
     @pyqtSlot()
