@@ -8,7 +8,7 @@
 > v2.00
 - `QT Designer` 사용해서 `.ui` 파일로 화면 생성
 - `QThread`로 주기적 갱신
-
+- `state` 별 `dataset` 적용
 
 
 ***

@@ -8,5 +8,21 @@
             "ON":"???",
             "RUN":"???"
         }
+    },
+    "DATASET":{
+        "TEST":{
+            "PRGNO" : "DW5004",
+            "PRGNAME" : "DW2090"
+        },
+        "CONNECT":{
+            "CONNECT":""
+        },
+        "START":{
+            "ON":"",
+            "RUN":""
+        },
+        "EXIT":{
+            "ON":""
+        }
     }
 }

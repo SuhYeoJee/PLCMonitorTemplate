@@ -32,18 +32,18 @@ class Controller:
         self.view.pushButton.clicked.connect(self.exit_monitoring)
         # [update] --------------------------
         self.start_monitoring()
-
     # -------------------------------------------------------------------------------------------
-    def set_lineEdit_plc_data(self):
-        print('set_lineEdit_plc_data')
-        plc_data = self.model.get_plc_data("DW5004")
-        self.view.lineEdit.setText(plc_data)
+
+    def worker_tick(self):
+        update_data = self.model.worker_tick()
+        self.view.lineEdit.setText(str(update_data.items()))
+
     # --------------------------
     @pyqtSlot()
     def start_monitoring(self)->None:
         if not self.worker.isRunning():
             self.worker = Worker(1000)  # timer 주기적으로 show_now 호출
-            self.worker.data_generated.connect(self.set_lineEdit_plc_data)  
+            self.worker.data_generated.connect(self.worker_tick)  
             self.worker.start()   
     # --------------------------
     def exit_monitoring(self)->None:
